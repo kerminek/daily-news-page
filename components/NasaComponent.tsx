@@ -7,7 +7,7 @@ const NasaComponent = (props: Props) => {
 
   return (
     <div className="min-w-[16rem] flex-1 place-self-center">
-      <h2 className="text-sm font-semibold text-center mb-1">NASA's Picture of the day</h2>
+      <h2 className="text-sm font-semibold text-center mb-1">NASA&apos;s Picture of the day</h2>
       <a className="relative inline-block h-full w-full" href={nasa.hdurl} target="_blank">
         <div
           className="min-h-[16rem] min-w-[16rem] flex justify-center border-double border-4"
