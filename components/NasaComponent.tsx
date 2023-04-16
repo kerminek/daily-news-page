@@ -22,7 +22,7 @@ const NasaComponent = (props: Props) => {
           </span>
         </div>
         <h5 className="text-white text-xs font-medium absolute top-2 right-2 w-fit mix-blend-difference">
-          Copyright: {nasa.copyright}
+          Copyright: {nasa.copyright || "NASA"}
         </h5>
       </a>
     </div>

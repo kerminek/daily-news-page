@@ -51,6 +51,7 @@ export async function getStaticProps() {
   //   title: "NGC 2419: Intergalactic Wanderer",
   //   copyright: 'Tunc Tezel',
   // };
+  console.log("Last time fetched: " + new Date().toTimeString());
 
   return {
     props: {
