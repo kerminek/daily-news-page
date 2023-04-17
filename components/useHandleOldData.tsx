@@ -9,7 +9,7 @@ const useHandleOldData = (fetchedAt: number) => {
       toast.error(`The data is outdated.\nReloading the page...`);
       setTimeout(() => {
         window.location.reload();
-      }, 1500);
+      }, 2000);
     } else {
       toast.success("The data is up to date");
     }
