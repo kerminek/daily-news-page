@@ -5,6 +5,8 @@ import NytComponent from "@/components/NytComponent";
 import ReutersComponent from "@/components/ReutersComponent";
 import useHandleOldData from "@/components/useHandleOldData";
 import Head from "next/head";
+import path from "path";
+import fs from "fs";
 import Parser from "rss-parser";
 
 export default function Home(props: any) {
@@ -49,9 +51,6 @@ export async function getStaticProps() {
   const reutersRes = await parser.parseURL(
     "https://www.reutersagency.com/feed/?best-topics=business-finance&post_type=best"
   );
-  const nasaRes = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_API}`).then((res) =>
-    res.json()
-  );
 
   // for testing
   const nasaTestRes = {
@@ -63,17 +62,26 @@ export async function getStaticProps() {
     copyright: "Tunc Tezel",
   };
 
+  const isProd = process.env.NODE_ENV === "production";
+  const nasaRes = isProd
+    ? await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_API}`).then((res) => res.json())
+    : nasaTestRes;
+
   const fetchedAt = new Date().getTime();
 
   console.log("Last time fetched: " + new Date(fetchedAt).toDateString());
 
-  const isProd = process.env.NODE_ENV === "production";
+  if (isProd) {
+    const pagesDir = path.join(process.cwd());
+    const readDir = fs.readdirSync(pagesDir);
+    console.log(readDir);
+  }
 
   return {
     props: {
       nyt: nytRes.items.slice(0, 11),
       reuters: reutersRes.items,
-      nasa: isProd ? nasaRes : nasaTestRes,
+      nasa: nasaRes,
       fetchedAt,
     },
     revalidate: 60 * (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15),
