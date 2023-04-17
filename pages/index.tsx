@@ -3,11 +3,14 @@ import CreditsBanner from "@/components/CreditsBanner";
 import NasaComponent from "@/components/NasaComponent";
 import NytComponent from "@/components/NytComponent";
 import ReutersComponent from "@/components/ReutersComponent";
+import useHandleOldData from "@/components/useHandleOldData";
 import Head from "next/head";
 import Parser from "rss-parser";
 
 export default function Home(props: any) {
-  const { nyt, reuters, nasa } = props;
+  const { nyt, reuters, nasa, fetchedAt } = props;
+
+  useHandleOldData(fetchedAt);
 
   return (
     <main className="sm:min-h-screen font-serif">
@@ -60,7 +63,9 @@ export async function getStaticProps() {
     copyright: "Tunc Tezel",
   };
 
-  console.log("Last time fetched: " + new Date().toTimeString());
+  const fetchedAt = new Date().getTime();
+
+  console.log("Last time fetched: " + new Date(fetchedAt).toDateString());
 
   const isProd = process.env.NODE_ENV === "production";
 
@@ -69,6 +74,7 @@ export async function getStaticProps() {
       nyt: nytRes.items.slice(0, 11),
       reuters: reutersRes.items,
       nasa: isProd ? nasaRes : nasaTestRes,
+      fetchedAt,
     },
     revalidate: 60 * 15,
   };
