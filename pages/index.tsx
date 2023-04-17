@@ -76,6 +76,6 @@ export async function getStaticProps() {
       nasa: isProd ? nasaRes : nasaTestRes,
       fetchedAt,
     },
-    revalidate: 60 * 15,
+    revalidate: 60 * (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15),
   };
 }
