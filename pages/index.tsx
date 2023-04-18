@@ -73,7 +73,7 @@ export async function getStaticProps() {
     props: {
       nyt: nytRes.items.slice(0, 11),
       reuters: reutersRes.items,
-      nasa: nasaTestRes,
+      nasa: nasaRes,
       fetchedAt,
     },
     revalidate: 60 * (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15),
