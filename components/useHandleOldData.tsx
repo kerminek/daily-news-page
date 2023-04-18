@@ -5,13 +5,28 @@ const useHandleOldData = (fetchedAt: number) => {
   useEffect(() => {
     const diffInSeconds = (new Date().getTime() - fetchedAt) / 1000;
     const diffInMinutes = diffInSeconds / 60;
+
     if (diffInMinutes > (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15)) {
-      toast.error(`The data is outdated.\nReloading the page...`);
-      setTimeout(() => {
-        window.location.reload();
-      }, 2000);
-    } else {
-      toast.success("The data is up to date");
+      const refresh = new Promise(async (resolve, reject) => {
+        await fetch("/api/refresh")
+          .then(async (res) => {
+            const resData = await res.json();
+            if (resData.refresh) {
+              resolve("success");
+            } else {
+              reject("should not refresh");
+            }
+          })
+          .catch((err) => reject(err));
+      });
+
+      toast.promise(refresh, {
+        loading: "Getting new informations...",
+        error: "Failed to fetch new data.",
+        success: "Reloading...",
+      });
+
+      refresh.then(() => window.location.reload());
     }
   }, [fetchedAt]);
 };
