@@ -5,8 +5,6 @@ import NytComponent from "@/components/NytComponent";
 import ReutersComponent from "@/components/ReutersComponent";
 import useHandleOldData from "@/components/useHandleOldData";
 import Head from "next/head";
-import path from "path";
-import fs from "fs";
 import Parser from "rss-parser";
 
 export default function Home(props: any) {
@@ -71,17 +69,11 @@ export async function getStaticProps() {
 
   console.log("Last time fetched: " + new Date(fetchedAt).toDateString());
 
-  if (isProd) {
-    const pagesDir = path.join(process.cwd());
-    const readDir = fs.readdirSync(pagesDir);
-    console.log(readDir);
-  }
-
   return {
     props: {
       nyt: nytRes.items.slice(0, 11),
       reuters: reutersRes.items,
-      nasa: nasaRes,
+      nasa: nasaTestRes,
       fetchedAt,
     },
     revalidate: 60 * (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15),
