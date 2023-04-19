@@ -7,11 +7,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   // should specify development path to trace. For now, i don't know which file we should track while on dev mode.
   const mainPageDir = path.join(process.cwd(), ".next", "server", "pages", isProd ? "index.html" : "index.js");
-  const currDir = path.join(process.cwd(), ".next", "server", "pages");
-  console.log(currDir);
 
   if (!fs.existsSync(mainPageDir)) {
-    res.status(404).json({ status: "file does not exist!", refresh: false });
+    const currDir = path.join(process.cwd(), ".next", "server", "pages");
+    const currDirRead = fs.readdirSync(currDir);
+    console.log(currDirRead);
+    res.status(404).json({ status: "file does not exist!", refresh: false, currDirRead });
     return;
   }
   const ageInSeconds = (new Date().getTime() - fs.statSync(mainPageDir).mtimeMs) / 1000;
