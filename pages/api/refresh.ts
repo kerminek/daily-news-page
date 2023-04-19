@@ -20,6 +20,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.log("Page regenerated at", lastRegenerationDate);
     res.status(200).end();
   } else if (req.method === "GET") {
+    if (!req.query.lastRegenerationDate) {
+      res.status(200).json({ refresh: false, message: "You didn't provide any date!" });
+      return;
+    }
     const userDate = Number(req.query.lastRegenerationDate);
 
     // This route will be called by the client to check if the page has been regenerated
