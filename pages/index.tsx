@@ -71,9 +71,8 @@ export async function getStaticProps() {
   const headers = new Headers();
   headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
 
-  await fetch(basePrefix + `/api/refresh?postRegenerationDate=${fetchedAt}`, {
+  await fetch(basePrefix + `/api/regenerated?postRegenerationDate=${fetchedAt}`, {
     method: "POST",
-    keepalive: false,
     headers,
   });
 
