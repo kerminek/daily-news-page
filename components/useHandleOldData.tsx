@@ -5,10 +5,13 @@ const useHandleOldData = (fetchedAt: number) => {
   useEffect(() => {
     const diffInSeconds = (new Date().getTime() - fetchedAt) / 1000;
     const diffInMinutes = diffInSeconds / 60;
+    const abortController = new AbortController();
 
     if (diffInMinutes > (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15)) {
       const refresh = new Promise(async (resolve, reject) => {
-        await fetch(window.location.href + "/api/refresh")
+        await fetch(window.location.href + `/api/refresh?lastRegenerationDate=${fetchedAt}`, {
+          signal: abortController.signal,
+        })
           .then(async (res) => {
             const resData = await res.json();
             if (resData.refresh) {
@@ -28,7 +31,9 @@ const useHandleOldData = (fetchedAt: number) => {
 
       refresh.then(() => window.location.reload());
     }
-  }, [fetchedAt]);
+
+    return () => abortController.abort();
+  }, []);
 };
 
 export default useHandleOldData;

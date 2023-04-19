@@ -67,7 +67,15 @@ export async function getStaticProps() {
 
   const fetchedAt = new Date().getTime();
 
-  console.log("Last time fetched: " + new Date(fetchedAt).toDateString());
+  const basePrefix = isProd ? "https://jakubkrwawicz.pl/portfolio-apps/news-app" : "http://localhost:3000";
+  const headers = new Headers();
+  headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
+
+  await fetch(basePrefix + `/api/refresh?postRegenerationDate=${fetchedAt}`, {
+    method: "POST",
+    keepalive: false,
+    headers,
+  });
 
   return {
     props: {

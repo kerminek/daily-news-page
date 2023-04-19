@@ -1,54 +1,42 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
-import fs from "fs";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const isProd = process.env.NODE_ENV === "production";
+let lastRegenerationDate: number;
 
-  // should specify development path to trace. For now, i don't know which file we should track while on dev mode.
-  const mainPageDir = path.join(process.cwd(), ".next", "server", "pages", isProd ? "index.html" : "index.js");
-
-  if (!fs.existsSync(mainPageDir)) {
-    const currDir = path.join(process.cwd(), ".next", "server", "pages");
-    const currDirRead = fs.readdirSync(currDir);
-    console.log(currDirRead);
-    res.status(404).json({ status: "file does not exist!", refresh: false, currDirRead });
-    return;
-  }
-  const ageInSeconds = (new Date().getTime() - fs.statSync(mainPageDir).mtimeMs) / 1000;
-  //   console.log(`It's just ${ageInSeconds} seconds old.`);
-
-  if (ageInSeconds < Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES || 15) * 60) {
-    if (ageInSeconds < 10) {
-      res.status(200).json({ status: "It still can be new for you. You may have a slow connection.", refresh: true });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "POST") {
+    const actualSecret = process.env.API_SECRET;
+    // Retrieve the Authorization header value from the request
+    const authHeader = req.headers.authorization;
+    // Extract the token value from the Authorization header
+    const token = authHeader ? authHeader.split(" ")[1] : null;
+    // Compare the token value with the actual secret value
+    if (token !== actualSecret) {
+      res.status(401).send("Unauthorized");
       return;
     }
+    // This route will be called by Next.js ISR after a page is regenerated
+    // Update the lastRegenerationDate variable
+    lastRegenerationDate = Number(req.query.postRegenerationDate);
+    console.log("Page regenerated at", lastRegenerationDate);
+    res.status(200).end();
+  } else if (req.method === "GET") {
+    const userDate = Number(req.query.lastRegenerationDate);
 
-    res.status(404).json({ status: `It's just ${ageInSeconds} seconds old.`, refresh: false });
-    return;
-  }
-
-  const mainPage = fs.watch(mainPageDir);
-  try {
-    const promise = new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => {
-        reject("Failed after timeout!");
-      }, 5000);
-
-      if (fs.existsSync(mainPageDir)) {
-        mainPage.addListener("change", () => {
-          mainPage.removeAllListeners("change");
-
-          clearTimeout(timeout);
-          resolve("successfuly resolved!");
-        });
+    // This route will be called by the client to check if the page has been regenerated
+    const maxWaitTime = 5000; // 5 seconds
+    let waitedTime = 0;
+    const intervalTime = 100; // Check every 100ms
+    const waitInterval = setInterval(() => {
+      if (waitedTime >= maxWaitTime) {
+        clearInterval(waitInterval);
+        res.status(200).json({ refresh: false });
+      } else if (lastRegenerationDate !== userDate) {
+        clearInterval(waitInterval);
+        res.status(200).json({ refresh: true, lastRegenerationDate });
       }
-    });
-
-    res.status(200).json({ status: await promise, refresh: true });
-  } catch (error) {
-    mainPage.removeAllListeners("change");
-
-    res.status(500).json({ status: error, refresh: false });
+      waitedTime += intervalTime;
+    }, intervalTime);
+  } else {
+    res.status(405).end(); // Method Not Allowed
   }
 }
