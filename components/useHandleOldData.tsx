@@ -15,9 +15,9 @@ const useHandleOldData = (fetchedAt: number) => {
           .then(async (res) => {
             const resData = await res.json();
             if (resData.refresh) {
-              resolve("success");
+              resolve(resData);
             } else {
-              reject("should not refresh");
+              reject(resData);
             }
           })
           .catch((err) => reject(err));
@@ -29,7 +29,8 @@ const useHandleOldData = (fetchedAt: number) => {
         success: "Reloading...",
       });
 
-      refresh.then(() => window.location.reload());
+      console.log(async () => await refresh);
+      // refresh.then(() => window.location.reload());
     }
 
     return () => abortController.abort();
