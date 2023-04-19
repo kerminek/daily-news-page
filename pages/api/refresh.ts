@@ -1,6 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-let lastRegenerationDate: number;
+import { createHash } from "crypto";
+import NodeCache from "node-cache";
+
+const cache = new NodeCache();
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
@@ -16,7 +19,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     // This route will be called by Next.js ISR after a page is regenerated
     // Update the lastRegenerationDate variable
-    lastRegenerationDate = Number(req.query.postRegenerationDate);
+    const lastRegenerationDate = Number(req.query.postRegenerationDate);
+
+    const key = createHash("md5").update("lastRegenerationDate").digest("hex");
+    cache.set(key, lastRegenerationDate);
+
     console.log("Page regenerated at", lastRegenerationDate);
     res.status(200).end();
   } else if (req.method === "GET") {
@@ -25,7 +32,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     const userDate = Number(req.query.lastRegenerationDate);
-    if (!lastRegenerationDate) lastRegenerationDate === userDate;
+    const key = createHash("md5").update("lastRegenerationDate").digest("hex");
+
+    if (!cache.get(key)) cache.set(key, userDate);
 
     // This route will be called by the client to check if the page has been regenerated
     const maxWaitTime = 5000; // 5 seconds
@@ -35,9 +44,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (waitedTime >= maxWaitTime) {
         clearInterval(waitInterval);
         res.status(200).json({ refresh: false });
-      } else if (lastRegenerationDate !== userDate) {
+      } else if (cache.get(key) !== userDate) {
         clearInterval(waitInterval);
-        res.status(200).json({ refresh: true, lastRegenerationDate });
+        res.status(200).json({ refresh: true, lastRegenerationDate: cache.get(key) });
       }
       waitedTime += intervalTime;
     }, intervalTime);
