@@ -25,6 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     const userDate = Number(req.query.lastRegenerationDate);
+    if (!lastRegenerationDate) lastRegenerationDate === userDate;
 
     // This route will be called by the client to check if the page has been regenerated
     const maxWaitTime = 5000; // 5 seconds

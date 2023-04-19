@@ -29,8 +29,7 @@ const useHandleOldData = (fetchedAt: number) => {
         success: "Reloading...",
       });
 
-      console.log(async () => await refresh);
-      // refresh.then(() => window.location.reload());
+      refresh.then(() => window.location.reload());
     }
 
     return () => abortController.abort();
