@@ -9,7 +9,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const mainPageDir = path.join(process.cwd(), ".next", "server", "pages", isProd ? "index.html" : "index.js");
 
   if (!fs.existsSync(mainPageDir)) {
-    res.status(404).json({ status: "file does not exist!", refresh: false });
+    const pagesPath = path.join(process.cwd(), ".next", "server", "pages");
+    const folder = fs.readdirSync(pagesPath);
+    res.status(404).json({ status: "file does not exist!", refresh: false, folder });
     return;
   }
   const ageInSeconds = (new Date().getTime() - fs.statSync(mainPageDir).mtimeMs) / 1000;

@@ -8,7 +8,7 @@ const useHandleOldData = (fetchedAt: number) => {
 
     if (diffInMinutes > (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15)) {
       const refresh = new Promise(async (resolve, reject) => {
-        await fetch("/api/refresh")
+        await fetch(window.location.href + "/api/refresh")
           .then(async (res) => {
             const resData = await res.json();
             if (resData.refresh) {
