@@ -20,7 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const timeout = setTimeout(
       (cache) => {
         cache.removeListener("set", listenerCallback);
-        console.log("logging from timeout!!");
+        console.log("logging from timeout!! with value: " + cache.get(key));
 
         res.status(200).json({ refresh: false, lastRegenerationDate: cache.get(key), slowConnection: true });
       },
