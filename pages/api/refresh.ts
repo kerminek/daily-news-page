@@ -18,11 +18,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // TEST
     const timeout = setTimeout(() => {
       cache.removeListener("set", listenerCallback);
+      console.log("logging from timeout!!");
 
       res.status(200).json({ refresh: false, lastRegenerationDate: cache.get(key), slowConnection: true });
     }, 5000);
 
     const listenerCallback = (eventKey: any, value: any) => {
+      console.log("logging from listener!!");
+
       cache.removeListener("set", listenerCallback);
       clearTimeout(timeout);
 
@@ -30,6 +33,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     };
 
     cache.on("set", listenerCallback);
+
+    console.log("the end of the request - at least should be!!");
 
     // TEST-END
 
