@@ -21,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       console.log("logging from timeout!!");
 
       res.status(200).json({ refresh: false, lastRegenerationDate: cache.get(key), slowConnection: true });
-    }, 5000);
+    }, 9000);
 
     const listenerCallback = (eventKey: any, value: any) => {
       console.log("logging from listener!!");
