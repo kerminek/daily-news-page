@@ -5,6 +5,8 @@ import { createHash } from "crypto";
 import cache from "@/cache";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  console.log("incoming call to /api/regenerated ...");
+
   if (req.method === "POST") {
     const actualSecret = process.env.API_SECRET;
     // Retrieve the Authorization header value from the request
