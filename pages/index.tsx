@@ -14,7 +14,7 @@ export default function Home(props: any) {
   const { nyt, reuters, nasa, fetchedAt } = props;
 
   useHandleOldData(fetchedAt);
-  // abc
+
   return (
     <main className="sm:min-h-screen font-serif">
       <Head>
@@ -70,18 +70,19 @@ export async function getStaticProps() {
 
   const fetchedAt = new Date().getTime();
 
-  // const basePrefix = isProd ? "https://jakubkrwawicz.pl/portfolio-apps/news-app" : "http://localhost:3000";
-  // const headers = new Headers();
-  // headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
+  const basePrefix = isProd ? "https://jakubkrwawicz.pl/portfolio-apps/news-app" : "http://localhost:3000";
+  const headers = new Headers();
+  headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
 
-  // await fetch(basePrefix + `/api/regenerated?postRegenerationDate=${fetchedAt}`, {
-  //   method: "POST",
-  //   headers,
-  // });
+  fetch(basePrefix + `/api/regenerated?postRegenerationDate=${fetchedAt}`, {
+    method: "POST",
+    headers,
+  });
+  console.log("Page regenerating... Fetch has been send with: " + fetchedAt);
 
-  const key = createHash("md5").update("lastRegenerationDate").digest("hex");
-  cache.set(key, fetchedAt);
-  console.log("Page regenerating... Cache has been set.", fetchedAt, cache.get(key));
+  // const key = createHash("md5").update("lastRegenerationDate").digest("hex");
+  // cache.set(key, fetchedAt);
+  // console.log("Page regenerating... Cache has been set.", fetchedAt, cache.get(key));
 
   return {
     props: {
