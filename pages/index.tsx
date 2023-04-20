@@ -1,3 +1,6 @@
+import cache from "@/cache";
+import { createHash } from "crypto";
+
 import AgencyBanner from "@/components/AgencyBanner";
 import CreditsBanner from "@/components/CreditsBanner";
 import NasaComponent from "@/components/NasaComponent";
@@ -67,14 +70,18 @@ export async function getStaticProps() {
 
   const fetchedAt = new Date().getTime();
 
-  const basePrefix = isProd ? "https://jakubkrwawicz.pl/portfolio-apps/news-app" : "http://localhost:3000";
-  const headers = new Headers();
-  headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
+  // const basePrefix = isProd ? "https://jakubkrwawicz.pl/portfolio-apps/news-app" : "http://localhost:3000";
+  // const headers = new Headers();
+  // headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
 
-  await fetch(basePrefix + `/api/regenerated?postRegenerationDate=${fetchedAt}`, {
-    method: "POST",
-    headers,
-  });
+  // await fetch(basePrefix + `/api/regenerated?postRegenerationDate=${fetchedAt}`, {
+  //   method: "POST",
+  //   headers,
+  // });
+
+  const key = createHash("md5").update("lastRegenerationDate").digest("hex");
+  cache.set(key, fetchedAt);
+  console.log("Page regenerating... Cache has been set.", fetchedAt);
 
   return {
     props: {
