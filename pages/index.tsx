@@ -1,4 +1,4 @@
-import cache from "@/cache";
+import { cache } from "@/cache";
 import { createHash } from "crypto";
 
 import AgencyBanner from "@/components/AgencyBanner";
