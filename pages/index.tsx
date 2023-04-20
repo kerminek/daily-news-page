@@ -81,7 +81,7 @@ export async function getStaticProps() {
 
   const key = createHash("md5").update("lastRegenerationDate").digest("hex");
   cache.set(key, fetchedAt);
-  console.log("Page regenerating... Cache has been set.", fetchedAt);
+  console.log("Page regenerating... Cache has been set.", fetchedAt, cache.get(key));
 
   return {
     props: {

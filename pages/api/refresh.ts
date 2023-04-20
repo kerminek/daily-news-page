@@ -13,15 +13,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const userDate = Number(req.query.lastRegenerationDate);
     const key = createHash("md5").update("lastRegenerationDate").digest("hex");
 
+    console.log("That's the value before refreshing process: " + cache.get(key));
     if (!cache.get(key)) cache.set(key, userDate);
 
     // TEST
-    const timeout = setTimeout(() => {
-      cache.removeListener("set", listenerCallback);
-      console.log("logging from timeout!!");
+    const timeout = setTimeout(
+      (cache) => {
+        cache.removeListener("set", listenerCallback);
+        console.log("logging from timeout!!");
 
-      res.status(200).json({ refresh: false, lastRegenerationDate: cache.get(key), slowConnection: true });
-    }, 9000);
+        res.status(200).json({ refresh: false, lastRegenerationDate: cache.get(key), slowConnection: true });
+      },
+      5000,
+      cache
+    );
 
     const listenerCallback = (eventKey: any, value: any) => {
       console.log("logging from listener!!");
