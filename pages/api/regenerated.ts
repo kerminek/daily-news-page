@@ -24,8 +24,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const key = createHash("md5").update("lastRegenerationDate").digest("hex");
     cache.set(key, lastRegenerationDate);
-
     console.log("Regenerated API: ", lastRegenerationDate);
+    console.log("List of the keys at the moment: " + cache.keys());
     res.status(200).end();
   }
 }
