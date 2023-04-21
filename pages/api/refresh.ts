@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { createHash } from "crypto";
 import NodeCache from "node-cache";
 
-const cache = new NodeCache({ useClones: false });
+const cache = new NodeCache();
 const key = createHash("md5").update("lastRegenerationDate").digest("hex");
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
