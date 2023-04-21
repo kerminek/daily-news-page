@@ -8,7 +8,7 @@ const useHandleOldData = (fetchedAt: number) => {
     const diffInMinutes = diffInSeconds / 60;
 
     if (diffInMinutes > (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15)) {
-      const refresh = fetchWithDelay(window.location.href + `/api/refresh?lastRegenerationDate=${fetchedAt}`, 500, 10);
+      const refresh = fetchWithDelay(window.location.href + `/api/refresh?lastRegenerationDate=${fetchedAt}`, 500, 1);
 
       toast.promise(refresh, {
         loading: "Getting new informations...",
