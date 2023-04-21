@@ -3,6 +3,7 @@ import { createHash } from "crypto";
 import NodeCache from "node-cache";
 
 const cache = new NodeCache();
+const key = createHash("md5").update("lastRegenerationDate").digest("hex");
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
@@ -12,7 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     const userDate = Number(req.query.lastRegenerationDate);
-    const key = createHash("md5").update("lastRegenerationDate").digest("hex");
 
     const currentDate = (cache.get(key) as number) || userDate;
     const shouldRefresh = userDate < currentDate;
@@ -20,7 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!shouldRefresh) {
       const timeout = setTimeout(() => {
         // cache.off("change", listener);
-        console.log("Logging the timeout.");
+        console.log("Logging the timeout with cache.get(key): " + cache.get(key));
         res.status(200).json({ refresh: shouldRefresh });
       }, 8000);
 
@@ -53,7 +53,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // Update the lastRegenerationDate variable
     const lastRegenerationDate = Number(req.query.postRegenerationDate);
 
-    const key = createHash("md5").update("lastRegenerationDate").digest("hex");
     cache.set(key, lastRegenerationDate);
     console.log("Regenerated API: ", lastRegenerationDate);
     console.log("List of the keys at the moment: " + cache.keys());
