@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const key = createHash("md5").update("lastRegenerationDate").digest("hex");
     cache.set(key, lastRegenerationDate);
 
-    console.log("Page regenerated at", lastRegenerationDate);
+    console.log("Regenerated API: ", lastRegenerationDate);
     res.status(200).end();
   }
 }

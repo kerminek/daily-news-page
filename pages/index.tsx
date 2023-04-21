@@ -1,6 +1,3 @@
-import cache from "@/cache";
-import { createHash } from "crypto";
-
 import AgencyBanner from "@/components/AgencyBanner";
 import CreditsBanner from "@/components/CreditsBanner";
 import NasaComponent from "@/components/NasaComponent";
@@ -9,6 +6,7 @@ import ReutersComponent from "@/components/ReutersComponent";
 import useHandleOldData from "@/components/useHandleOldData";
 import Head from "next/head";
 import Parser from "rss-parser";
+import { GetStaticProps } from "next";
 
 export default function Home(props: any) {
   const { nyt, reuters, nasa, fetchedAt } = props;
@@ -46,7 +44,7 @@ export default function Home(props: any) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const parser = new Parser();
   const nytRes = await parser.parseURL("https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml");
   const reutersRes = await parser.parseURL(
@@ -70,19 +68,19 @@ export async function getStaticProps() {
 
   const fetchedAt = new Date().getTime();
 
-  const basePrefix = isProd ? "https://jakubkrwawicz.pl/portfolio-apps/news-app" : "http://localhost:3000";
+  const basePrefix = process.env.BASE_PREFIX || "http://localhost:3000/portfolio-apps/news-app";
   const headers = new Headers();
   headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
 
-  fetch(basePrefix + `/api/regenerated?postRegenerationDate=${fetchedAt}`, {
-    method: "POST",
-    headers,
-  });
-  console.log("Page regenerating... Fetch has been send with: " + fetchedAt);
-
-  // const key = createHash("md5").update("lastRegenerationDate").digest("hex");
-  // cache.set(key, fetchedAt);
-  // console.log("Page regenerating... Cache has been set.", fetchedAt, cache.get(key));
+  try {
+    fetch(basePrefix + `/api/regenerated?postRegenerationDate=${fetchedAt}`, {
+      method: "POST",
+      headers,
+    });
+    console.log("Page regenerating... Fetch has been send with: " + fetchedAt);
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: {
@@ -93,4 +91,4 @@ export async function getStaticProps() {
     },
     revalidate: 60 * (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15),
   };
-}
+};
