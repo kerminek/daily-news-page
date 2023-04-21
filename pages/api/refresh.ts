@@ -19,7 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (!shouldRefresh) {
       const timeout = setTimeout(() => {
-        // cache.off("change", listener);
+        cache.off("change", listener);
         console.log("Logging the timeout with cache.get(key): " + cache.get(key));
         res.status(200).json({ refresh: shouldRefresh });
       }, 8000);
@@ -33,7 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       };
 
       console.log("Starting to listening the cache...");
-      cache.once("set", listener);
+      cache.on("set", listener);
     } else {
       console.log("If there's already a proper value we are sending true: " + shouldRefresh);
       res.status(200).json({ refresh: shouldRefresh });
