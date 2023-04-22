@@ -1,4 +1,3 @@
-import fetchWithDelay from "@/utils/fetchWithDelay";
 import { useEffect } from "react";
 import { toast } from "react-hot-toast";
 
@@ -8,7 +7,7 @@ const useHandleOldData = (fetchedAt: number) => {
     const diffInMinutes = diffInSeconds / 60;
 
     if (diffInMinutes > (Number(process.env.NEXT_PUBLIC_REVALIDATE_MINUTES) || 15)) {
-      const refresh = fetchWithDelay(window.location.href + `/api/refresh?lastRegenerationDate=${fetchedAt}`, 500, 1);
+      const refresh = fetch(window.location.href + `/api/refresh?lastRegenerationDate=${fetchedAt}`);
 
       toast.promise(refresh, {
         loading: "Getting new informations...",

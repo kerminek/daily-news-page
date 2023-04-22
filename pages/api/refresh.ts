@@ -2,6 +2,9 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import fetchWithDelay from "@/utils/fetchWithDelay";
 
+const headers = new Headers();
+headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     if (!req.query.lastRegenerationDate) {
@@ -12,48 +15,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const shouldRefresh = await fetchWithDelay(
         process.env.BASE_URL + `/api/cache?lastRegenerationDate=${req.query.lastRegenerationDate}`,
         Number(process.env.FETCH_INTERVAL_TIME || 250),
-        Number(process.env.FETCH_INTERVAL_TRIES || 20)
+        Number(process.env.FETCH_INTERVAL_TRIES || 20),
+        headers
       );
-
-      // const userDate = Number(req.query.lastRegenerationDate);
-
-      // const currentDate = (cache.get(key) as number) || userDate;
-      // const shouldRefresh = userDate < currentDate;
 
       if (!shouldRefresh) {
         res.status(200).json({ refresh: false });
-
-        // const timeout = setTimeout(() => {
-        //   cache.off("set", listener);
-        //   console.log("Logging the timeout with cache.get(key): " + cache.get(key));
-        //   res.status(200).json({ refresh: shouldRefresh });
-        // }, 8000);
-        // const listener = (_key: string, value: number) => {
-        //   console.log("listener worked!!!");
-        //   if (_key === key && userDate < value) {
-        //     clearTimeout(timeout);
-        //     res.status(200).json({ refresh: true });
-        //   }
-        // };
-        // console.log("Starting to listening the cache...");
-        // cache.on("set", listener);
-        // let timePassed = 0;
-        // const intervalTime = Number(process.env.INTERVAL_TIME) || 100;
-        // const intervalTimeout = Number(process.env.INTERVAL_TIMEOUT) || 5000;
-        // const interval = setInterval(() => {
-        //   const cacheVal = (cache.get(key) as number) || userDate;
-        //   if (userDate < cacheVal) {
-        //     clearInterval(interval);
-        //     res.status(200).json({ refresh: true });
-        //     return;
-        //   }
-        //   if (intervalTimeout === timePassed) {
-        //     clearInterval(interval);
-        //     res.status(200).json({ refresh: false });
-        //     return;
-        //   }
-        //   timePassed += intervalTime;
-        // }, intervalTime);
       } else {
         console.log("If there's already a proper value we are sending true: " + shouldRefresh);
         res.status(200).json({ refresh: true });
