@@ -11,8 +11,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const shouldRefresh = await fetchWithDelay(
         process.env.BASE_URL + `/api/cache?lastRegenerationDate=${req.query.lastRegenerationDate}`,
-        250,
-        10
+        Number(process.env.FETCH_INTERVAL_TIME || 250),
+        Number(process.env.FETCH_INTERVAL_TRIES || 20)
       );
 
       // const userDate = Number(req.query.lastRegenerationDate);
