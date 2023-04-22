@@ -8,7 +8,6 @@ const key = createHash("md5").update("lastRegenerationDate").digest("hex");
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
-    console.log("POST CACHE --- " + JSON.stringify(cache.data));
     const actualSecret = process.env.API_SECRET;
     // Retrieve the Authorization header value from the request
     const authHeader = req.headers.authorization;
@@ -24,12 +23,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const lastRegenerationDate = Number(req.query.postRegenerationDate);
 
     cache.set(key, lastRegenerationDate);
-    console.log("Regenerated API: ", lastRegenerationDate);
-    console.log("List of the keys at the moment: " + cache.keys());
+    console.log("CACHE-POST--- ", lastRegenerationDate);
     res.status(200).end();
   } else if (req.method === "GET") {
     const userDate = Number(req.query.lastRegenerationDate);
-
+    console.log("CACHE-GET--- ", userDate, cache.get(key));
     const currentDate = (cache.get(key) as number) || userDate;
     const shouldRefresh = userDate < currentDate;
 
