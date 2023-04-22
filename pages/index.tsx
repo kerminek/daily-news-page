@@ -68,12 +68,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const fetchedAt = new Date().getTime();
 
-  const basePrefix = process.env.BASE_PREFIX || "http://localhost:3000/portfolio-apps/news-app";
+  const basePrefix = process.env.BASE_URL || "http://localhost:3000/portfolio-apps/news-app";
   const headers = new Headers();
   headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
 
   try {
-    fetch(basePrefix + `/api/refresh?postRegenerationDate=${fetchedAt}`, {
+    fetch(basePrefix + `/api/cache?postRegenerationDate=${fetchedAt}`, {
       method: "POST",
       headers,
     });
