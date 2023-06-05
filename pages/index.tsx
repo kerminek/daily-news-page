@@ -62,17 +62,26 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 
   const isProd = process.env.NODE_ENV === "production";
-  const nasaRes = isProd
-    ? await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_API}`).then((res) => res.json())
-    : nasaTestRes;
-
   const fetchedAt = new Date().getTime();
+  let nasaRes;
 
-  const basePrefix = process.env.BASE_URL || "http://localhost:3000/portfolio-apps/news-app";
-  const headers = new Headers();
-  headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
+  isProd
+    ? await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_API}`)
+        .then(async (res) => {
+          const jsonedRes = await res.json();
+          nasaRes = jsonedRes;
+        })
+        .catch((err) => {
+          console.error(err);
+          nasaRes = { ...nasaTestRes, error: true };
+        })
+    : (nasaRes = nasaTestRes);
 
   try {
+    const basePrefix = process.env.BASE_URL || "http://localhost:3000/portfolio-apps/news-app";
+    const headers = new Headers();
+    headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
+
     fetch(basePrefix + `/api/cache?postRegenerationDate=${fetchedAt}`, {
       method: "POST",
       headers,
