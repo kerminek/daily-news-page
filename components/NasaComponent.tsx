@@ -18,9 +18,10 @@ const NasaComponent = (props: Props) => {
           }}
         >
           {nasa?.error ? (
-            <span className="text-red-600 text-sm font-bold font-mono absolute bottom-2">
-              NASA`s API ERROR <br /> OLD IMAGE INSTEAD
-            </span>
+            <div className="bg-black/50 text-red-600 text-xs font-extrabold font-mono absolute bottom-2 px-2 py-1 flex flex-wrap justify-evenly items-center w-[calc(100%-10px)] gap-x-10">
+              <span className="w-fit">NASA`s API ERROR</span>
+              <span className="w-fit">OLD IMAGE INSTEAD</span>
+            </div>
           ) : (
             <span className="text-white absolute bottom-2 font-mono mix-blend-difference lg:hidden">
               click for better quality
