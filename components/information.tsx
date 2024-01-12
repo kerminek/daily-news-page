@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
-import LoadingBar from "./loadingBar";
+import LoadingBar from "@/components/loadingBar";
 
 type Props = {
   popupState: boolean;
