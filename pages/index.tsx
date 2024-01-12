@@ -1,17 +1,17 @@
-import AgencyBanner from "@/components/AgencyBanner";
-import CreditsBanner from "@/components/CreditsBanner";
-import NasaComponent from "@/components/NasaComponent";
-import NytComponent from "@/components/NytComponent";
-import ReutersComponent from "@/components/ReutersComponent";
-import useHandleOldData from "@/components/useHandleOldData";
+import AgencyBanner from "@/components/agencyBanner";
+import CreditsBanner from "@/components/creditsBanner";
+import NasaComponent from "@/components/nasaComponent";
+import NytComponent from "@/components/nytComponent";
+import ReutersComponent from "@/components/reutersComponent";
 import Head from "next/head";
 import Parser from "rss-parser";
 import { GetStaticProps } from "next";
+import InformationComponent from "@/components/information";
+import { useState } from "react";
 
 export default function Home(props: any) {
-  const { nyt, reuters, nasa, fetchedAt } = props;
-
-  useHandleOldData(fetchedAt);
+  const { nyt, reuters, nasa } = props;
+  const [popupState, popupStateSet] = useState(true);
 
   return (
     <main className="sm:min-h-screen font-serif">
@@ -20,6 +20,7 @@ export default function Home(props: any) {
         <meta name="author" content="Jakub Krwawicz" />
         <meta name="description" content="The News Page - Your daily briefing." />
       </Head>
+      <InformationComponent popupState={popupState} popupStateSet={popupStateSet} />
       <section className="container mx-auto px-4 lg:px-8 pb-20 flex flex-wrap gap-x-4 lg:gap-x-8">
         {/* left side */}
         <NytComponent nyt={nyt} />
@@ -45,11 +46,10 @@ export default function Home(props: any) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const isProd = process.env.NODE_ENV === "production";
   const parser = new Parser();
-  const nytRes = await parser.parseURL("https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml");
-  const reutersRes = await parser.parseURL(
-    "https://www.reutersagency.com/feed/?best-topics=business-finance&post_type=best"
-  );
+  const nytRes = await parser.parseURL((process.env.BASE_URL as string) + "/nyt.xml");
+  const reutersRes = await parser.parseURL((process.env.BASE_URL as string) + "/reuters.xml");
 
   // for testing
   const nasaTestRes = {
@@ -61,7 +61,6 @@ export const getStaticProps: GetStaticProps = async () => {
     copyright: "Tunc Tezel",
   };
 
-  const isProd = process.env.NODE_ENV === "production";
   const fetchedAt = new Date().getTime();
   let nasaRes;
 
@@ -76,20 +75,6 @@ export const getStaticProps: GetStaticProps = async () => {
           nasaRes = { ...nasaTestRes, error: true };
         })
     : (nasaRes = nasaTestRes);
-
-  try {
-    const basePrefix = process.env.BASE_URL || "http://localhost:3000/portfolio-apps/news-app";
-    const headers = new Headers();
-    headers.append("Authorization", `Bearer ${process.env.API_SECRET}`);
-
-    fetch(basePrefix + `/api/cache?postRegenerationDate=${fetchedAt}`, {
-      method: "POST",
-      headers,
-    });
-    console.log("Page regenerating... Fetch has been send with: " + fetchedAt);
-  } catch (error) {
-    console.log(error);
-  }
 
   return {
     props: {

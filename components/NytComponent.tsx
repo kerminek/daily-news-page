@@ -1,5 +1,5 @@
 import borderOnResize from "@/utils/borderOnResize";
-import AgencyBanner from "./AgencyBanner";
+import AgencyBanner from "./agencyBanner";
 
 type Props = any;
 
