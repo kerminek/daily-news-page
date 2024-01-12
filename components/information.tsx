@@ -24,8 +24,8 @@ const InformationComponent = (props: Props) => {
 
   return (
     <div
-      className={`w-full h-screen fixed bg-white/90 z-50 flex justify-center items-center font-sans transition-all duration-700 cursor-pointer ${
-        !popupState && "opacity-0 -z-50"
+      className={`w-full h-screen z-50 fixed bg-white/90 flex justify-center items-center font-sans transition-all duration-700 cursor-pointer ${
+        !popupState && "opacity-0 invisible"
       }`}
       onClick={() => popupStateSet(false)}
     >

@@ -4,10 +4,11 @@ import NasaComponent from "@/components/nasaComponent";
 import NytComponent from "@/components/nytComponent";
 import ReutersComponent from "@/components/reutersComponent";
 import Head from "next/head";
-import Parser from "rss-parser";
 import { GetStaticProps } from "next";
 import InformationComponent from "@/components/information";
 import { useState } from "react";
+import nytData from "@/staticData/nyt.json";
+import reutersData from "@/staticData/reuters.json";
 
 export default function Home(props: any) {
   const { nyt, reuters, nasa } = props;
@@ -21,7 +22,7 @@ export default function Home(props: any) {
         <meta name="description" content="The News Page - Your daily briefing." />
       </Head>
       <InformationComponent popupState={popupState} popupStateSet={popupStateSet} />
-      <section className="container mx-auto px-4 lg:px-8 pb-20 flex flex-wrap gap-x-4 lg:gap-x-8">
+      <section className="container mx-auto px-4 lg:px-8 pb-20 flex flex-wrap gap-x-4 lg:gap-x-8 z-50">
         {/* left side */}
         <NytComponent nyt={nyt} />
         {/* right side */}
@@ -47,11 +48,6 @@ export default function Home(props: any) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const isProd = process.env.NODE_ENV === "production";
-  const parser = new Parser();
-  const nytRes = await parser.parseURL((process.env.BASE_URL as string) + "/nyt.xml");
-  const reutersRes = await parser.parseURL((process.env.BASE_URL as string) + "/reuters.xml");
-
-  // for testing
   const nasaTestRes = {
     hdurl: "https://apod.nasa.gov/apod/image/2304/hubble_ngc2419_potw1908a.jpg",
     url: "https://apod.nasa.gov/apod/image/2304/hubble_ngc2419_potw1908a_1024.jpg",
@@ -78,8 +74,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      nyt: nytRes.items.slice(0, 11),
-      reuters: reutersRes.items,
+      nyt: nytData.items.slice(0, 11),
+      reuters: reutersData.items,
       nasa: nasaRes,
       fetchedAt,
     },

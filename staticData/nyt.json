@@ -1,0 +1,498 @@
+{
+  "items": [
+    {
+      "creator": "Danny Hakim",
+      "title": "Trump Seeks Details of Atlanta Prosecutor’s Meetings with Biden Aides",
+      "link": "https://www.nytimes.com/2024/01/11/us/trump-biden-fani-willis-nathan-wade.html",
+      "pubDate": "Thu, 11 Jan 2024 16:20:50 +0000",
+      "dc:creator": "Danny Hakim",
+      "content": "Nathan Wade met with White House staff members in 2022, when he was seeking witnesses for the investigation into whether Donald J. Trump interfered in the 2020 election in Georgia.",
+      "contentSnippet": "Nathan Wade met with White House staff members in 2022, when he was seeking witnesses for the investigation into whether Donald J. Trump interfered in the 2020 election in Georgia.",
+      "guid": "https://www.nytimes.com/2024/01/11/us/trump-biden-fani-willis-nathan-wade.html",
+      "categories": [
+        {
+          "_": "Georgia Criminal Case Against Trump (2020 Election)",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        {
+          "_": "United States Politics and Government",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Presidential Election of 2020", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "Storming of the US Capitol (Jan, 2021)",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Fulton County (Ga)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "Trump, Donald J", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Wade, Nathan J", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Willis, Fani T", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Roman, Mike (1972- )", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } }
+      ],
+      "isoDate": "2024-01-11T16:20:50.000Z"
+    },
+    {
+      "creator": "Jennifer Medina and Jordan Gale",
+      "title": "Will You Vote for Trump Again?",
+      "link": "https://www.nytimes.com/2024/01/11/us/politics/iowa-voters.html",
+      "pubDate": "Thu, 11 Jan 2024 10:01:02 +0000",
+      "dc:creator": "Jennifer Medina and Jordan Gale",
+      "content": "It’s the question weighing on Republicans across the country. But Iowans get to decide first. We listened as they grappled with their choices.",
+      "contentSnippet": "It’s the question weighing on Republicans across the country. But Iowans get to decide first. We listened as they grappled with their choices.",
+      "guid": "https://www.nytimes.com/2024/01/11/us/politics/iowa-voters.html",
+      "categories": [
+        { "_": "vis-photo", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Presidential Election of 2024", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Iowa", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "Republican Party", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Trump, Donald J", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "DeSantis, Ron", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Haley, Nikki R", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Ramaswamy, Vivek (1985- )", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } }
+      ],
+      "isoDate": "2024-01-11T10:01:02.000Z"
+    },
+    {
+      "creator": "Maggie Haberman",
+      "title": "Trump Tried to Clean Up His Remarks on TV, but Not on Social",
+      "link": "https://www.nytimes.com/2024/01/11/us/politics/trump-truth-social-media.html",
+      "pubDate": "Thu, 11 Jan 2024 18:41:27 +0000",
+      "dc:creator": "Maggie Haberman",
+      "content": "The former president presented a more restrained front on air Wednesday, but he resumed his more incendiary comments soon after.",
+      "contentSnippet": "The former president presented a more restrained front on air Wednesday, but he resumed his more incendiary comments soon after.",
+      "guid": "https://www.nytimes.com/2024/01/11/us/politics/trump-truth-social-media.html",
+      "categories": [
+        { "_": "Trump, Donald J", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Republican Party", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Presidential Election of 2024", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "United States Politics and Government",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        }
+      ],
+      "isoDate": "2024-01-11T18:41:27.000Z"
+    },
+    {
+      "creator": "Astead W. Herndon, Caitlin O’Keefe and Elisa Gutierrez",
+      "title": "Did Haley and DeSantis Ever Stand a Chance Against Trump in the Republican Primary?",
+      "link": "https://www.nytimes.com/2024/01/10/podcasts/republican-primary-candidates-trump.html",
+      "pubDate": "Thu, 11 Jan 2024 10:00:24 +0000",
+      "dc:creator": "Astead W. Herndon, Caitlin O’Keefe and Elisa Gutierrez",
+      "content": "A look at Ron DeSantis and Nikki Haley’s quest to catch the former president — and finish ahead in their race for second place.",
+      "contentSnippet": "A look at Ron DeSantis and Nikki Haley’s quest to catch the former president — and finish ahead in their race for second place.",
+      "guid": "https://www.nytimes.com/2024/01/10/podcasts/republican-primary-candidates-trump.html",
+      "categories": [
+        { "_": "Politics and Government", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Presidential Election of 2024", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Biden, Joseph R Jr", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Trump, Donald J", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "DeSantis, Ron", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Haley, Nikki R", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } }
+      ],
+      "isoDate": "2024-01-11T10:00:24.000Z"
+    },
+    {
+      "creator": "Jeanna Smialek",
+      "title": "Fresh Inflation Data Shows Intact, but Bumpy, Cool-Down",
+      "link": "https://www.nytimes.com/2024/01/11/business/inflation-cpi-report.html",
+      "pubDate": "Thu, 11 Jan 2024 16:08:34 +0000",
+      "dc:creator": "Jeanna Smialek",
+      "content": "Inflation remains faster than usual — and month-to-month bumps are still likely as volatile prices fluctuate — but it is making progress back toward a normal pace.",
+      "contentSnippet": "Inflation remains faster than usual — and month-to-month bumps are still likely as volatile prices fluctuate — but it is making progress back toward a normal pace.",
+      "guid": "https://www.nytimes.com/2024/01/11/business/inflation-cpi-report.html",
+      "categories": [
+        { "_": "Prices (Fares, Fees and Rates)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "United States Economy", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Consumer Price Index", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Inflation (Economics)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Interest Rates", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Wages and Salaries", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Federal Reserve System", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } }
+      ],
+      "isoDate": "2024-01-11T16:08:34.000Z"
+    },
+    {
+      "creator": "Madeleine Ngo and Ivan Penn",
+      "title": "As Utility Bills Rise, Low-Income Americans Struggle for Access to Clean Energy",
+      "link": "https://www.nytimes.com/2024/01/11/us/politics/utility-bills-clean-energy.html",
+      "pubDate": "Thu, 11 Jan 2024 15:19:07 +0000",
+      "dc:creator": "Madeleine Ngo and Ivan Penn",
+      "content": "The Biden administration has deployed various programs to try to increase access to clean energy. But systems that could help lower bills are still out of reach for many low-income households.",
+      "contentSnippet": "The Biden administration has deployed various programs to try to increase access to clean energy. But systems that could help lower bills are still out of reach for many low-income households.",
+      "guid": "https://www.nytimes.com/2024/01/11/us/politics/utility-bills-clean-energy.html",
+      "categories": [
+        { "_": "Income Inequality", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Poverty", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "Alternative and Renewable Energy",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Solar Energy", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "Tax Credits, Deductions and Exemptions",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Energy Efficiency", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Heating", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Electric and Hybrid Vehicles", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "United States Politics and Government",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Home Appliances", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Energy and Power", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Baltimore (Md)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "Biden, Joseph R Jr", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } }
+      ],
+      "isoDate": "2024-01-11T15:19:07.000Z"
+    },
+    {
+      "creator": "Mark Walker",
+      "title": "F.A.A. Investigating Whether Boeing 737 Max 9 Conformed to Approved Design",
+      "link": "https://www.nytimes.com/2024/01/11/business/faa-boeing-737-boeing-max-investigation.html",
+      "pubDate": "Thu, 11 Jan 2024 19:25:28 +0000",
+      "dc:creator": "Mark Walker",
+      "content": "Regulators are examining whether Boeing complied with safety rules on a plane that lost a fuselage panel while in flight last week.",
+      "contentSnippet": "Regulators are examining whether Boeing complied with safety rules on a plane that lost a fuselage panel while in flight last week.",
+      "guid": "https://www.nytimes.com/2024/01/11/business/faa-boeing-737-boeing-max-investigation.html",
+      "categories": [
+        { "_": "Airlines and Airplanes", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Boeing Company", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Alaska Airlines", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        {
+          "_": "Federal Aviation Administration",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" }
+        },
+        {
+          "_": "Aviation Accidents, Safety and Disasters",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        {
+          "_": "Regulation and Deregulation of Industry",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "United Airlines", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        {
+          "_": "Boeing 737 Max Groundings and Safety Concerns (2019)",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        {
+          "_": "National Transportation Safety Board",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" }
+        },
+        { "_": "Portland (Ore)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } }
+      ],
+      "isoDate": "2024-01-11T19:25:28.000Z"
+    },
+    {
+      "creator": "Jenny Gross and Farnaz Fassihi",
+      "title": "Iranian Navy Says It Seized an Oil Tanker Off the Coast of Oman",
+      "link": "https://www.nytimes.com/2024/01/11/world/middleeast/oil-vessel-gulf-oman-iran.html",
+      "pubDate": "Thu, 11 Jan 2024 19:37:03 +0000",
+      "dc:creator": "Jenny Gross and Farnaz Fassihi",
+      "content": "The same vessel was involved last year in the U.S. government seizure of Iranian oil that was being transported in violation of American sanctions.",
+      "contentSnippet": "The same vessel was involved last year in the U.S. government seizure of Iranian oil that was being transported in violation of American sanctions.",
+      "guid": "https://www.nytimes.com/2024/01/11/world/middleeast/oil-vessel-gulf-oman-iran.html",
+      "categories": [
+        { "_": "Oil (Petroleum) and Gasoline", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "International Relations", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Israel-Gaza War (2023- )", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Gulf of Oman", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "Iran", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "Middle East", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "Oman", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } }
+      ],
+      "isoDate": "2024-01-11T19:37:03.000Z"
+    },
+    {
+      "creator": "Catie Edmondson",
+      "title": "Conservatives Revolt Over Mike Johnson’s Deal to Avert Shutdown",
+      "link": "https://www.nytimes.com/2024/01/10/us/politics/house-republicans-johnson-deal-shutdown.html",
+      "pubDate": "Thu, 11 Jan 2024 16:23:42 +0000",
+      "dc:creator": "Catie Edmondson",
+      "content": "A dozen hard-line Republicans ground business to a halt in protest of the deal Speaker Mike Johnson struck with Democrats to avert a shutdown, leaving the funding package in limbo.",
+      "contentSnippet": "A dozen hard-line Republicans ground business to a halt in protest of the deal Speaker Mike Johnson struck with Democrats to avert a shutdown, leaving the funding package in limbo.",
+      "guid": "https://www.nytimes.com/2024/01/10/us/politics/house-republicans-johnson-deal-shutdown.html",
+      "categories": [
+        {
+          "_": "United States Politics and Government",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Law and Legislation", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "House Freedom Caucus", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Johnson, Mike (1972- )", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Schumer, Charles E", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "McConnell, Mitch", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "McCarthy, Kevin (1965- )", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Biden, Joseph R Jr", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Shutdowns (Institutional)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Federal Budget (US)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } }
+      ],
+      "isoDate": "2024-01-11T16:23:42.000Z"
+    },
+    {
+      "creator": "Bill Pennington",
+      "title": "Bill Belichick Had Legendary Success With The New England Patriots",
+      "link": "https://www.nytimes.com/2024/01/11/us/bill-belichick-new-england-patriots.html",
+      "pubDate": "Thu, 11 Jan 2024 19:01:23 +0000",
+      "dc:creator": "Bill Pennington",
+      "content": "The head coach of the Patriots, who has parted ways with the team after 24 years, won six Super Bowls with a taciturn approach that rewarded performance over potential.",
+      "contentSnippet": "The head coach of the Patriots, who has parted ways with the team after 24 years, won six Super Bowls with a taciturn approach that rewarded performance over potential.",
+      "guid": "https://www.nytimes.com/2024/01/11/us/bill-belichick-new-england-patriots.html",
+      "categories": [
+        { "_": "Belichick, Bill", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "New England Patriots", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Football", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "National Football League", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Content Type: Personal Profile", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Brady, Tom", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Super Bowl", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Records and Achievements", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Boston (Mass)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "New England States (US)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } }
+      ],
+      "isoDate": "2024-01-11T19:01:23.000Z"
+    },
+    {
+      "creator": "Manohla Dargis",
+      "title": "‘Mean Girls’ Review: ‘Get in, Loser,’ Regina George Is Back",
+      "link": "https://www.nytimes.com/2024/01/11/movies/mean-girls-review.html",
+      "pubDate": "Thu, 11 Jan 2024 14:46:09 +0000",
+      "dc:creator": "Manohla Dargis",
+      "content": "Still puffily padded but no longer particularly tart, this shape-shifting classic about the girls you love to hate retains its ingratiating charms.",
+      "contentSnippet": "Still puffily padded but no longer particularly tart, this shape-shifting classic about the girls you love to hate retains its ingratiating charms.",
+      "guid": "https://www.nytimes.com/2024/01/11/movies/mean-girls-review.html",
+      "categories": [
+        { "_": "Movies", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Mean Girls (Movie)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_ttl" } },
+        { "_": "Jayne, Samantha", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Perez, Arturo Jr", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Fey, Tina", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Rice, Angourie", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Renee Rapp", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Avantika", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Bebe Wood", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Michaels, Lorne", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } }
+      ],
+      "isoDate": "2024-01-11T14:46:09.000Z"
+    },
+    {
+      "creator": "Jason Zinoman",
+      "title": "Can Taylor Tomlinson Have It All and a Life, Too?",
+      "link": "https://www.nytimes.com/2024/01/11/arts/television/taylor-tomlinson.html",
+      "pubDate": "Thu, 11 Jan 2024 17:02:06 +0000",
+      "dc:creator": "Jason Zinoman",
+      "content": "The stand-up has a new TV gig and a spot on the list of top-grossing comedy tours. Still, “there sometimes feels like there isn’t anyone my age to talk to.”",
+      "contentSnippet": "The stand-up has a new TV gig and a spot on the list of top-grossing comedy tours. Still, “there sometimes feels like there isn’t anyone my age to talk to.”",
+      "guid": "https://www.nytimes.com/2024/01/11/arts/television/taylor-tomlinson.html",
+      "categories": [
+        { "_": "Comedy and Humor", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Television", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Content Type: Personal Profile", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Tomlinson, Taylor (1993- )", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "CBS Corporation", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Netflix Inc", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "After Midnight (TV Program)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_ttl" } }
+      ],
+      "isoDate": "2024-01-11T17:02:06.000Z"
+    },
+    {
+      "creator": "Bret Stephens",
+      "title": "The Case for Donald Trump By Someone Who Wants Him to Lose",
+      "link": "https://www.nytimes.com/2024/01/11/opinion/columnists/donald-trump-election.html",
+      "pubDate": "Thu, 11 Jan 2024 15:50:48 +0000",
+      "dc:creator": "Bret Stephens",
+      "content": "You can’t defeat an opponent if you refuse to understand what makes him formidable.",
+      "contentSnippet": "You can’t defeat an opponent if you refuse to understand what makes him formidable.",
+      "guid": "https://www.nytimes.com/2024/01/11/opinion/columnists/donald-trump-election.html",
+      "categories": [
+        { "_": "Presidential Election of 2024", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "United States Politics and Government",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Polls and Public Opinion", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "Democracy (Theory and Philosophy)",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Trump, Donald J", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Biden, Joseph R Jr", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "United States", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } }
+      ],
+      "isoDate": "2024-01-11T15:50:48.000Z"
+    },
+    {
+      "creator": "Frank Bruni",
+      "title": "We Missed Chris Christie at the DeSantis-Haley Debate",
+      "link": "https://www.nytimes.com/2024/01/11/opinion/iowa-debate-desantis-haley.html",
+      "pubDate": "Thu, 11 Jan 2024 15:54:22 +0000",
+      "dc:creator": "Frank Bruni",
+      "content": "Nikki Haley and Ron DeSantis summon the right fury for the wrong target.",
+      "contentSnippet": "Nikki Haley and Ron DeSantis summon the right fury for the wrong target.",
+      "guid": "https://www.nytimes.com/2024/01/11/opinion/iowa-debate-desantis-haley.html",
+      "categories": [
+        { "_": "Presidential Election of 2024", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Debates (Political)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Primaries and Caucuses", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Polls and Public Opinion", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "Storming of the US Capitol (Jan, 2021)",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Republican Party", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Haley, Nikki R", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Trump, Donald J", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Des Moines (Iowa)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "Iowa", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "DeSantis, Ron", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } }
+      ],
+      "isoDate": "2024-01-11T15:54:22.000Z"
+    },
+    {
+      "creator": "Peter Coy",
+      "title": "The Scariest Part About the Boeing 737 Max 9 Blowout",
+      "link": "https://www.nytimes.com/2024/01/10/opinion/boeing-737-max-alaska-japan-airlines.html",
+      "pubDate": "Wed, 10 Jan 2024 23:30:47 +0000",
+      "dc:creator": "Peter Coy",
+      "content": "What I heard wasn’t necessarily reassuring.",
+      "contentSnippet": "What I heard wasn’t necessarily reassuring.",
+      "guid": "https://www.nytimes.com/2024/01/10/opinion/boeing-737-max-alaska-japan-airlines.html",
+      "categories": [
+        { "_": "internal-sub-only-nl", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Airlines and Airplanes", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "Aviation Accidents, Safety and Disasters",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        {
+          "_": "Boeing 737 Max Groundings and Safety Concerns (2019)",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Factories and Manufacturing", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Accidents and Safety", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Alaska Airlines", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Boeing Company", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        {
+          "_": "National Transportation Safety Board",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" }
+        }
+      ],
+      "isoDate": "2024-01-10T23:30:47.000Z"
+    },
+    {
+      "creator": "German Lopez",
+      "title": "U.S. Crime Rate Fell in 2023",
+      "link": "https://www.nytimes.com/2024/01/11/briefing/us-crime-rate.html",
+      "pubDate": "Thu, 11 Jan 2024 16:12:15 +0000",
+      "dc:creator": "German Lopez",
+      "content": "Murders likely fell at record speed last year.",
+      "contentSnippet": "Murders likely fell at record speed last year.",
+      "guid": "https://www.nytimes.com/2024/01/11/briefing/us-crime-rate.html",
+      "categories": [
+        { "_": "internal-storyline-no", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Crime and Criminals", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } }
+      ],
+      "isoDate": "2024-01-11T16:12:15.000Z"
+    },
+    {
+      "creator": "Eric Schmitt",
+      "title": "Pentagon Inspector General to Investigate Lloyd Austin’s Hospitalization",
+      "link": "https://www.nytimes.com/2024/01/11/us/politics/austin-hospitalization-pentagon-review.html",
+      "pubDate": "Thu, 11 Jan 2024 18:29:36 +0000",
+      "dc:creator": "Eric Schmitt",
+      "content": "The independent review will be conducted in addition to assessments by the defense secretary’s chief of staff and the White House after top officials were not notified of the episode for days.",
+      "contentSnippet": "The independent review will be conducted in addition to assessments by the defense secretary’s chief of staff and the White House after top officials were not notified of the episode for days.",
+      "guid": "https://www.nytimes.com/2024/01/11/us/politics/austin-hospitalization-pentagon-review.html",
+      "categories": [
+        { "_": "Austin, Lloyd J III", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Inspectors General", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Defense Department", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        {
+          "_": "United States Defense and Military Forces",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        {
+          "_": "United States Politics and Government",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" }
+        },
+        { "_": "Biden, Joseph R Jr", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } }
+      ],
+      "isoDate": "2024-01-11T18:29:36.000Z"
+    },
+    {
+      "creator": "Remy Tumin",
+      "title": "Grand Jury Declines to Indict Ohio Woman Accused of Abuse of Corpse",
+      "link": "https://www.nytimes.com/2024/01/11/us/brittany-watts-ohio-miscarriage.html",
+      "pubDate": "Thu, 11 Jan 2024 19:22:07 +0000",
+      "dc:creator": "Remy Tumin",
+      "content": "In a case that had drawn international attention, a grand jury in Ohio decided not to indict a woman who miscarried at home and disposed of the nonviable fetus.",
+      "contentSnippet": "In a case that had drawn international attention, a grand jury in Ohio decided not to indict a woman who miscarried at home and disposed of the nonviable fetus.",
+      "guid": "https://www.nytimes.com/2024/01/11/us/brittany-watts-ohio-miscarriage.html",
+      "categories": [
+        { "_": "Jury System", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Pregnancy and Childbirth", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Watts, Brittany (1989- )", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Ohio", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } },
+        { "_": "Trumbull County (Ohio)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } }
+      ],
+      "isoDate": "2024-01-11T19:22:07.000Z"
+    },
+    {
+      "creator": "Zachary Small",
+      "title": "Indiana University Cancels Palestinian Artist Samia Halaby’s Exhibition",
+      "link": "https://www.nytimes.com/2024/01/11/arts/design/indiana-university-samia-halaby-exhibition-canceled.html",
+      "pubDate": "Thu, 11 Jan 2024 15:34:30 +0000",
+      "dc:creator": "Zachary Small",
+      "content": "Samia Halaby, an 87-year-old artist, has been outspoken in her support of Palestinians during the Israel-Gaza war.",
+      "contentSnippet": "Samia Halaby, an 87-year-old artist, has been outspoken in her support of Palestinians during the Israel-Gaza war.",
+      "guid": "https://www.nytimes.com/2024/01/11/arts/design/indiana-university-samia-halaby-exhibition-canceled.html",
+      "categories": [
+        { "_": "Colleges and Universities", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Israel-Gaza War (2023- )", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Art", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Museums", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        {
+          "_": "Eskenazi Museum of Art at Indiana University",
+          "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" }
+        },
+        { "_": "Indiana University", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org" } },
+        { "_": "Halaby, Samia A", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Indiana", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_geo" } }
+      ],
+      "isoDate": "2024-01-11T15:34:30.000Z"
+    },
+    {
+      "creator": "Roslyn Sulcas",
+      "title": "Clive Owen Takes on ‘Monsieur Spade,’ Inspired by Bogart",
+      "link": "https://www.nytimes.com/2024/01/11/arts/television/monsieur-spade-clive-owen.html",
+      "pubDate": "Thu, 11 Jan 2024 10:13:31 +0000",
+      "dc:creator": "Roslyn Sulcas",
+      "content": "In “Monsieur Spade,” a new AMC show, Clive Owen plays the inscrutable Sam Spade, attempting to put his past behind him in the South of France.",
+      "contentSnippet": "In “Monsieur Spade,” a new AMC show, Clive Owen plays the inscrutable Sam Spade, attempting to put his past behind him in the South of France.",
+      "guid": "https://www.nytimes.com/2024/01/11/arts/television/monsieur-spade-clive-owen.html",
+      "categories": [
+        { "_": "Actors and Actresses", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Television", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } },
+        { "_": "Owen, Clive", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per" } },
+        { "_": "Monsieur Spade (TV Program)", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/nyt_ttl" } },
+        { "_": "Content Type: Personal Profile", "$": { "domain": "http://www.nytimes.com/namespaces/keywords/des" } }
+      ],
+      "isoDate": "2024-01-11T10:13:31.000Z"
+    }
+  ],
+  "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+  "image": {
+    "link": "https://www.nytimes.com",
+    "url": "https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png",
+    "title": "NYT > Top Stories"
+  },
+  "paginationLinks": { "self": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" },
+  "title": "NYT > Top Stories",
+  "description": "",
+  "pubDate": "Thu, 11 Jan 2024 19:37:03 +0000",
+  "link": "https://www.nytimes.com",
+  "language": "en-us",
+  "copyright": "Copyright 2024 The New York Times Company",
+  "lastBuildDate": "Thu, 11 Jan 2024 19:41:09 +0000"
+}
