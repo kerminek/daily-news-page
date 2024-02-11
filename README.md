@@ -1,38 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Daily News Page
+&nbsp;&nbsp;&nbsp;This project used to show the current news from NYTimes and Reuters agencies, but due to the many problems with their RSS support, I removed that functionality. Only NASA's Picture of the Day is being fetched from their API.
 
-## Getting Started
+&nbsp;&nbsp;&nbsp;I think that this project features a pretty interesting layout, both on desktop and mobile. The only problem I've had was with limiting both API and RSS usage so the content wouldn't be refreshed too often. I couldn't really do that using classic cache strategies because I don't have any server to deploy my things; I use just Vercel. Of course, I could use a database and keep there a date of the last successful page generation. But I didn't want to use a database service to store just one value. So I've decided to use a Next.js feature called 'Incremental Static Regeneration (ISR)'.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Technologies used in this project:
+  - Next.js
+  - Tailwind
+  - A little bit of Typescript
